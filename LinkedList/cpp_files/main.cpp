@@ -16,4 +16,3 @@ int main()
 	test.delete_index_test();
 	test.reverse_list_test();
 }
-

@@ -6,11 +6,11 @@
 class LinkedList {
 public:
 	LinkedList() = default;
-	LinkedList(int value);
+	LinkedList(const int value);
 	~LinkedList();
 
-	void insert_head(int value);
-	void insert_tail(int value);
+	void insert_head(const int value);
+	void insert_tail(const int value);
 	void delete_head();
 	void delete_tail();
 
@@ -20,10 +20,10 @@ public:
 	[[nodiscard]] int get_head() const;
 	[[nodiscard]] int get_tail() const;
 
-	Node* get_index(int index) const;
-	bool set_index(int index, int value) const;
-	bool insert_index(int index, int value);
-	bool delete_index(int index);
+	Node* get_index(const int index) const;
+	bool set_index(const int index, const int value) const;
+	bool insert_index(const int index, const int value);
+	bool delete_index(const int index);
 
 	bool reverse_list();
 

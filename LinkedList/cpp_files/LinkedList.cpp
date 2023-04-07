@@ -1,6 +1,6 @@
 #include "LinkedList.h"
 
-LinkedList::LinkedList(int value)
+LinkedList::LinkedList(const int value)
 {
 	Node* p_newnode = new Node(value);
 
@@ -20,7 +20,7 @@ LinkedList::~LinkedList()
 	}
 }
 
-void LinkedList::insert_head(int value)
+void LinkedList::insert_head(const int value)
 {
 	Node* p_newnode = new Node(value);
 	if (m_length == 0)
@@ -35,7 +35,7 @@ void LinkedList::insert_head(int value)
 	++m_length;
 }
 
-void LinkedList::insert_tail(int value)
+void LinkedList::insert_tail(const int value)
 {
 	Node* p_newnode = new Node(value);
 
@@ -134,7 +134,7 @@ int LinkedList::get_tail() const
 		return p_tailnode->node_value;
 }
 
-Node* LinkedList::get_index(int index) const
+Node* LinkedList::get_index(const int index) const
 {
 	if (index >= m_length || index < 0)
 		return nullptr;
@@ -156,7 +156,7 @@ Node* LinkedList::get_index(int index) const
 	}
 }
 
-bool LinkedList::set_index(int index, int value) const
+bool LinkedList::set_index(const int index, const int value) const
 {
 	Node* p_tempnode = get_index(index);
 	if (!p_tempnode)
@@ -168,7 +168,7 @@ bool LinkedList::set_index(int index, int value) const
 	}
 }
 
-bool LinkedList::insert_index(int index, int value)
+bool LinkedList::insert_index(const int index, const int value)
 {
 	if (index < 0 || index > m_length)
 		return false;
@@ -190,7 +190,7 @@ bool LinkedList::insert_index(int index, int value)
 	return true;
 }
 
-bool LinkedList::delete_index(int index)
+bool LinkedList::delete_index(const int index)
 {
 	if (index < 0 || index >= m_length)
 		return false;

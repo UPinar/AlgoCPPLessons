@@ -36,7 +36,7 @@ void LinkedListTest::insert_tail_test()
 	{
 		print_small_line();
 		std::cout << i << " added to tail\n";
-		ll.insert_head(i);
+		ll.insert_tail(i);
 		std::cout << "List = ";
 		ll.print_list();
 	}
@@ -265,6 +265,7 @@ void LinkedListTest::reverse_list_test()
 	for (int i = 10; i < 14; ++i)
 	{
 		print_small_line();
+		std::cout << i << " added to list\n";
 		ll.insert_tail(i);
 		std::cout << "List = ";
 		ll.print_list();

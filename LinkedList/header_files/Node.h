@@ -3,7 +3,7 @@
 
 class Node {
 public:
-	Node(int value) : node_value(value), p_nextnode(nullptr) {}
+	Node(const int value) : node_value(value), p_nextnode(nullptr) {}
 
 	~Node()
 	{
